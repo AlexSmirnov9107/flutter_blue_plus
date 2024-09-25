@@ -175,7 +175,7 @@ class FlutterBluePlus {
   /// - You must still call device.connect() to connect them to *your app*
   /// Service UUID (iOS only),
   static Future<List<BluetoothDevice>> systemDevices(String? uuid) async {
-    var result = await _invokeMethod('getSystemDevices',{"uuid":uuid});
+    var result = await _invokeMethod('getSystemDevices',{"service_uuid":uuid});
     var r = BmDevicesList.fromMap(result);
     for (BmBluetoothDevice device in r.devices) {
       if (device.platformName != null) {
