@@ -653,9 +653,6 @@ class FlutterBluePlus {
   @Deprecated('Use adapterState instead')
   static Stream<BluetoothAdapterState> get state => adapterState;
 
-  @Deprecated('Use systemDevices instead')
-  static Future<List<BluetoothDevice>> get connectedSystemDevices => systemDevices;
-
   @Deprecated('No longer needed, remove this from your code')
   static void get instance => null;
 
